@@ -1,0 +1,75 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: sans-serif";
+
+}
+header{
+    margin-left: 50px;
+    margin-right: 50Px;
+}
+.contact-bar{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 4px;
+    margin: 0;
+    
+}
+.contact-bar-info{
+    font-family: 'Poppins', sans-serif;
+    font-size: 11.6px;
+    justify-content: center;
+    text-align: center;
+    color: #fafafa;
+    padding: 1px;
+    
+}
+.email-link{
+    
+    color: #fafafa;
+}
+.link-bar{
+    padding: 12px;
+    
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+}
+.link-bar li{
+    display: inline-block;
+    padding: 2.5px;
+    
+}
+.link-bar a img{
+    width: 24px;
+}
+.raja-sahib-logo{
+    padding: 5px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fafafa;
+}
+.raja-sahib-logo img{
+    width: 200px;
+}
+.main-page-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 100%;
+   height: 100%;
+   
+}
+.main-page-logo img{
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    width: 100%;
+}
+
+
