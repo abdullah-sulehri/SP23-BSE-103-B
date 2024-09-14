@@ -1,0 +1,52 @@
+footer{
+    background-color: black;
+    text-align: center;
+    
+}
+.footer-section img{
+    width: 84px;
+
+}
+.social-media-links-footer{
+    padding-top: 10px;
+}
+.social-media-links-footer a img{
+    width: 24px;
+    background-color: black;
+}
+#fb{
+    color: black;
+}
+.cards-detail{
+  
+    padding-top: 100px;
+    color: aliceblue;
+    font-style: italic;
+}
+.cards-detail img{
+    width: 120px;
+}
+.cards-detail p{
+    
+    font-size: 12px;
+}
+.copyright-section{
+    
+    color: aliceblue;
+    font-size: 12px;
+}
+.footer-text {
+    color: aliceblue;
+    font-size: 12px;
+}
+footer p{
+    color: aliceblue;
+    font-size: 12px;
+    align-items: end;
+}
+footer hr{
+    border: 100px;
+    border-color: aliceblue;
+}
+
+

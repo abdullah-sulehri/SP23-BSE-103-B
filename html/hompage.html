@@ -7,45 +7,185 @@
     <link rel="icon" type="image/png" href="/SP23-BSE-103-B/assets/Favicon_b58202ce-0f82-4b88-bdf2-4f7ac8ba6ed1.avif">
     <title>Raja Sahib: Designers, Branded &amp; Luxury Pakistani Dresses</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        
+        function slideLeft() {
+            const menu = document.querySelector('.menu-items');
+            menu.scrollBy({
+                left: -200,  
+                behavior: 'smooth'
+            });
+        }
+
+        
+        function slideRight() {
+            const menu = document.querySelector('.menu-items');
+            menu.scrollBy({
+                left: 200, 
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </head>
 <body>
     <div class="contact-bar">
         <div class="contact-bar-info">
-        <p>
-            Contact Us: +92 3369994777
-            <br>
-            Email:
-            <a  href="mailto:support@halothemes.com" class="email-link"> help@rajasahib.com</a>
-        </p>
+            <p>
+                Contact Us: +92 3369994777
+                <br>
+                Email:
+                <a  href="mailto:support@halothemes.com" class="email-link"> help@rajasahib.com</a>
+            </p>
         </div>
     </div>
-    <header>
-        <div class="link-bar">
-            <ul >
-                <li><a href="https://www.facebook.com/therajasahib">
-                    <img src="../assets/vecteezy_facebook-social-media-icon-symbol-vector-illustration_8385754.jpg " 
-                     alt="facebook-icon" title="Raja Sahib on Facebook">
-                    </a></li>
-                <li> <a href="https://www.instagram.com/rajasahibofficial/">
-                    <img src="../assets/black-instagram-logo-3497.png" alt="instagram-icon" title="Raja Sahib on Instagram">
-                </a></li>
-                <li><a href=" https://www.youtube.com/channel/UCzWjh5DehCCp0yzmftvgwDw">
-                    <img src="../assets/Free png black youtube logo best free large images - transparentpng_com.jfif" alt="youtube-icon" title="Raja Sahib on  Youtube">
-                </a></li>
-                <li><a href="https://www.linkedin.com/company/rajasahibofficial/">
-                    <img src="../assets/vecteezy_linkedin-logo-vector-linkedin-symbol-linkedin-icon-free_18910809.jpg" alt="linkedin-icon" title="Raja Sahib on Linkedin">
-                </a></li>    
-            </ul>
-        </div>
+    <div class="link-bar">
+        <ul>
+            <li><a href="https://www.facebook.com/therajasahib" target="_blank"><img src="../assets/vecteezy_facebook-social-media-icon-symbol-vector-illustration_8385754.jpg" alt="facebook-icon" title="Raja Sahib on Facebook"></a></li>
+            <li><a href="https://www.instagram.com/rajasahibofficial/" target="_blank"><img src="../assets/black-instagram-logo-3497.png" alt="instagram-icon" title="Raja Sahib on Instagram"></a></li>
+            <li><a href=" https://www.youtube.com/channel/UCzWjh5DehCCp0yzmftvgwDw" target="_blank"><img src="../assets/Free png black youtube logo best free large images - transparentpng_com.jfif" alt="youtube-icon" title="Raja Sahib on YouTube"></a></li>
+            <li><a href="https://www.linkedin.com/company/rajasahibofficial/" target="_blank"><img src="../assets/vecteezy_linkedin-logo-vector-linkedin-symbol-linkedin-icon-free_18910809.jpg" alt="linkedin-icon" title="Raja Sahib on Linkedin"></a></li>    
+        </ul>
+    </div>
 
-        <div class="raja-sahib-logo">
-            <img src="../assets/logo_new.avif" alt="raja-sahib-logo">
-        </div>
+    <div class="raja-sahib-logo">
+        <a href="../html/hompage.html"><img src="../assets/logo_new.avif" alt="raja-sahib-logo"></a>
+    </div>
+
+    <header>
+        
+
+        <nav class="menue-container">
+            <!-- Navigation arrows -->
+             
+            <button class="nav-btn left-btn" onclick="slideLeft()">&#10094;</button>
+            
+
+            <div class="menu-items">
+                <ul>
+                    <li><a href="#">End of Season Sale</a></li>
+                    <li><a href="#">Summer 24</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Shop by Brand</a></li>
+                    <li><a href="#">Ready to Wear</a></li>
+                    <li><a href="#">Unstitched</a></li>
+                    <li><a href="#">Formals</a></li>
+                    <li><a href="#">Mens Wear</a></li>
+                    <li><a href="#">Footwear</a></li>
+                    <li><a href="#">Kids Store</a></li>
+                </ul>
+            </div>
+            <!-- Right arrow -->
+            
+            <button class="nav-btn right-btn" onclick="slideRight()">&#10095;</button>
+            
+        </nav>
     </header>
+
     <main>
         <div class="main-page-logo">
             <img src="../assets/Screenshot 2024-09-14 004513.png" alt="">
         </div>
+        <div class="sale-icons">
+            <div class="sale-banner">
+                <a href="#" target="_main">
+                    <img src="../assets/end-of-season-sale-mobilemenu_250x.avif" alt="">
+                </a>
+            </div>
+            <div class="sale-icon1">
+                <a href="#" target="_main">
+                    <img src="../assets/upto_50_c81072b6-682f-438c-a762-544ec7ebe068_250x.avif" alt="">
+                </a>
+            </div>
+            <div class="sale-icon1">
+                <a href="#" target="_main">
+                    <img src="../assets/upto_30_336696e5-ac25-4836-a7fa-db012124e712_250x.avif" alt="">
+                </a>
+            </div>
+            <div class="sale-icon1">
+                <a href="#" target="_main">
+                    <img src="../assets/upto_20_10079c79-6d16-44f9-b66b-0b91d38c422e_250x.avif" alt="">
+                </a>
+            </div>
+            <div class="sale-icon1">
+                <a href="#" target="_main">
+                    <img src="../assets/upto_10_d5a69e0b-c703-49bc-9cc5-4fafbc48a384_250x.avif" alt="">
+                </a>
+            </div>
+            
+        </div>
+
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia doloribus hic laudantium quis! Consectetur, qui consequuntur. Inventore fugiat temporibus voluptas omnis ratione minima facilis doloribus magni, nisi unde iusto sequi.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius similique saepe laboriosam minus, recusandae expedita maiores ullam animi quia autem consectetur optio incidunt nobis laborum, atque hic cupiditate rerum quas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aspernatur, eligendi velit enim labore facilis. In, autem. Voluptate expedita optio illum aperiam, culpa consequuntur sit quo maxime. Numquam, nemo quos!
+            
+        </div>
     </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section logo-section">
+                <img src="../assets/BeFunky-design__1_-removebg-preview.webp" alt="Raja Sahib Logo" class="footer-logo">
+                
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/therajasahib" target="_blank">
+                        <img src="../assets/—Pngtree—facebook white icon_3570425.png" 
+                        alt="facebook-icon" title="Raja Sahib on Facebook"></a>
+                    <a href="https://www.instagram.com/rajasahibofficial/" target="_blank">
+                        <img src="../assets/—Pngtree—white instagram icon png instagram_3562066.png" class="instagram-img" alt="instagram-icon" title="Raja Sahib on Instagram"></a>
+                    <a href=" https://www.youtube.com/channel/UCzWjh5DehCCp0yzmftvgwDw" target="_blank">
+                        <img src="../assets/—Pngtree—youtube icon_3584904.png" 
+                        alt="youtube-icon" title="Raja Sahib on YouTube"></a>
+                    <a href="https://www.linkedin.com/company/rajasahibofficial/" target="_blank">
+                        <img src="../assets/—Pngtree—linkedin icon_3584907.png"
+                         alt="linkedin-icon" title="Raja Sahib on Linkedin"></a>   
+                </div>
+                
+                <div class="payment-methods">
+                    <img src="../assets/card-400-40_d9c1e9f0-795a-40db-a363-d3cc0cfd54de.avif" alt="">
+                </div>
+                <p><i>100% Secured Checkout</p></i>
+            </div>
+            <div class="footer-section info-section">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Become a Partner</a></li>
+                    <li><a href="#">Store Locator</a></li>
+                    <li><a href="#">Track My Order</a></li>
+                    <li><a href="#">Wholesale</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section quick-links-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Return and Exchange Policy</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Editorial Blog</a></li>
+                </ul>
+                
+            </div>
+            
+            <div class="footer-section subscribe-section">
+                <h4>Subscribe to Our Newsletter</h4>
+                <form action="#" class="input-form">
+                    <input type="email" placeholder="Your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            
+               
+            
+            
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024, Raja Sahib. All rights reserved. Powered by Shopify</p>
+        </div>
+    </footer>
+    
+
 </body>
 </html>
