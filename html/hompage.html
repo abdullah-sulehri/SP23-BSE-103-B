@@ -25,6 +25,35 @@
                 behavior: 'smooth'
             });
         }
+
+
+            function slideLogosLeft() {
+            const menu1 = document.querySelector('#logosContainer1');
+            const menu2=document.querySelector('#logosContainer2')
+            menu1.scrollBy({
+                left: -200,  
+                behavior: 'smooth'
+            });
+            menu2.scrollBy({
+                left: -200,  
+                behavior: 'smooth'
+            })
+        }
+
+        
+        function slideLogosRight() {
+            const menu1 = document.querySelector('#logosContainer1');
+            const menu2 = document.querySelector('#logosContainer2');
+            menu1.scrollBy({
+                left: 200, 
+                behavior: 'smooth'
+            });
+            menu2.scrollBy({
+                left: 200, 
+                behavior: 'smooth'
+            });
+            
+        }
     </script>
 </head>
 <body>
@@ -56,11 +85,15 @@
 
         <nav class="menue-container">
             <!-- Navigation arrows -->
+            <div class="search-icon">
+                <a href="#" ><img src="../assets/icons8-search-50.png" alt=""></a>
+            </div>
              
             <button class="nav-btn left-btn" onclick="slideLeft()">&#10094;</button>
             
 
             <div class="menu-items">
+                
                 <ul>
                     <li><a href="#">End of Season Sale</a></li>
                     <li><a href="#">Summer 24</a></li>
@@ -77,6 +110,16 @@
             <!-- Right arrow -->
             
             <button class="nav-btn right-btn" onclick="slideRight()">&#10095;</button>
+            <div class="user-icon">
+                <a href="#">
+                    <img src="../assets/user-128-48.png" alt="">
+                </a>
+            </div>
+            <div class="shopping-icon">
+                <a href="#">
+                    <img src="../assets/—Pngtree—vector shopping bag icon_4869075.png" alt="">
+                </a>
+            </div>
             
         </nav>
     </header>
@@ -119,6 +162,37 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia doloribus hic laudantium quis! Consectetur, qui consequuntur. Inventore fugiat temporibus voluptas omnis ratione minima facilis doloribus magni, nisi unde iusto sequi.
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius similique saepe laboriosam minus, recusandae expedita maiores ullam animi quia autem consectetur optio incidunt nobis laborum, atque hic cupiditate rerum quas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aspernatur, eligendi velit enim labore facilis. In, autem. Voluptate expedita optio illum aperiam, culpa consequuntur sit quo maxime. Numquam, nemo quos!
             
+        </div>
+        <div class="slider-container">
+            <div><button class="slide-btn left" onclick="slideLogosLeft()">&#10094;</button></div>
+            <div class="logos-wrapper">
+                <div class="logos-container" id="logosContainer1">
+                    <a href=""><img src="../assets/Untitled-1_2c4a1ca2-b6e7-4992-a53f-2cccb70e80bc.webp" alt=""></a>
+                    <a href=""><img src="../assets/Ayzel_3173bfe0-3a10-4f33-bf01-963a2e443bf9.webp" alt="Brand 1" class="brand-logo"></a>
+                    <a href=""><img src="../assets/Maria-B_940cfd7e-8c65-4031-9941-3cafcb8cb1ac.webp" alt="Brand 2" class="brand-logo"></a>
+                    <a href=""><img src="../assets/Mushq_77b6ea16-696c-43db-834a-a41b47fcac37.webp" alt="Brand 3" class="brand-logo"></a>
+                    <a href=""><img src="../assets/Flossie_ec25f5d3-62d2-474e-87a8-80864e7eb2f2.webp" alt="Brand 20" class="brand-logo"></a>
+                    <a href=""><img src="../assets/Ramsha_3143452c-69fa-47f9-b95c-f1c9e438c765.webp" alt=""></a>
+                    <a href=""><img src="../assets/Aabyan_ddcd7c96-5e57-4cf9-aecd-c785eae29910.webp" alt=""></a>
+                    <a href=""><img src="../assets/Asim_Jofa.webp" alt=""></a>
+                    <a href=""><img src="../assets/Untitled-1_bb462e67-3b4d-400a-a8a8-cf698dc81b7d.webp" alt=""></a>
+                    <a href=""><img src="../assets/Charizma.webp" alt=""></a>
+                    
+                </div>
+                <div class="logos-container2" id="logosContainer2">
+                    <a href=""><img src="../assets/Untitled-1_2c4a1ca2-b6e7-4992-a53f-2cccb70e80bc.webp" alt=""></a>
+                    <a href=""><img src="../assets/Ayzel_3173bfe0-3a10-4f33-bf01-963a2e443bf9.webp" alt="Brand 1" class="brand-logo"></a>
+                    <a href=""><img src="../assets/Maria-B_940cfd7e-8c65-4031-9941-3cafcb8cb1ac.webp" alt="Brand 2" class="brand-logo"></a>
+                    <a href=""><img src="../assets/Mushq_77b6ea16-696c-43db-834a-a41b47fcac37.webp" alt="Brand 3" class="brand-logo"></a>
+                    <a href=""><img src="../assets/Flossie_ec25f5d3-62d2-474e-87a8-80864e7eb2f2.webp" alt="Brand 20" class="brand-logo"></a>
+                    <a href=""><img src="../assets/Ramsha_3143452c-69fa-47f9-b95c-f1c9e438c765.webp" alt=""></a>
+                    <a href=""><img src="../assets/Aabyan_ddcd7c96-5e57-4cf9-aecd-c785eae29910.webp" alt=""></a>
+                    <a href=""><img src="../assets/Asim_Jofa.webp" alt=""></a>
+                    <a href=""><img src="../assets/Untitled-1_bb462e67-3b4d-400a-a8a8-cf698dc81b7d.webp" alt=""></a>
+                    <a href=""><img src="../assets/Charizma.webp" alt=""></a>
+                </div>
+            </div>
+            <div><button class="slide-btn right" onclick="slideLogosRight()">&#10095;</button></div>
         </div>
     </main>
     <footer>
