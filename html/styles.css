@@ -359,10 +359,10 @@ footer {
 }
 
 .logos-container {
-    display: flex; /* Switch to flex to enable horizontal scrolling */
-    gap: 20px; /* Space between images */
+    display: flex; 
+    gap: 20px; 
     transition: transform 0.4s ease;
-    overflow-x: auto; /* Allow horizontal scrolling */
+    overflow-x: auto; 
     scrollbar-width: none;
     align-items: center;
     align-content: center;
@@ -370,10 +370,10 @@ footer {
     
 }
 .logos-container2{
-    display: flex; /* Switch to flex to enable horizontal scrolling */
-    gap: 20px; /* Space between images */
+    display: flex; 
+    gap: 20px;
     transition:  transform 0.4s ease;
-    overflow-x: auto; /* Allow horizontal scrolling */
+    overflow-x: auto; 
     scrollbar-width: none;
     align-items: center;
     align-content: center;
@@ -416,13 +416,48 @@ footer {
 
 .right {
     right: 0;
+
+
 }.brands-heading {
     margin-top: 10%;
-    text-align: center; /* Center the text horizontally */
-    margin-bottom: 20px; /* Space between the heading and the slider */
+    text-align: center; 
+    margin-bottom: 20px; 
 }
 
-.brands-heading p {
-    font-size: 24px; /* Adjust font size as needed */
-    margin: 0; /* Remove default margin */
+.brands-heading p{
+    font-size: 24px;
+    margin: 0; 
 }
+.end-of-season-deals-container{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 50px ;
+
+}
+.heading-box {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+.banner-heading {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    border-bottom: 1px solid #d7d4d4;
+    text-transform: uppercase;
+}
+
+.end-of-season-images{
+    
+    margin-right: 2%;
+    overflow-x: hidden;
+    gap: 1.5%;
+    margin-top: 2%;
+    display: flex;
+    width: 100%;
+    
+}
+.end-of-season-images a img{
+}
+
