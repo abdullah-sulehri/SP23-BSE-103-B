@@ -107,11 +107,12 @@ header img{
     list-style: none;
     padding: 0;
     margin: 0;
+   
 }
 
 
 .menu-items ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 .menu-items ul li a {
@@ -129,7 +130,7 @@ header img{
 .nav-btn {
     background-color: #f1f1f1;
     border: none;
-    padding: 10px;
+    
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
@@ -142,14 +143,18 @@ header img{
 }
 
 .left-btn {
-    
-    
-    padding: 2px;
+    position: relative;
+    margin-right: 20px;
+    border-right: 0.2px solid black;
+    padding-right: 10px;
     background-color: transparent;
 }
 
 .right-btn {
-    
+    position: relative;
+    margin-left: 20px;
+    padding-left: 10px; 
+    border-left: 0.2px solid black;
     background-color: transparent;
 }
 .search-icon{
@@ -285,16 +290,20 @@ footer {
 }
 
 .subscribe-section input {
+    background-color: transparent;
     margin-bottom: 3px;
     width: 70%;
     border: none;
-    border-radius: 5px;
+    border-bottom: 1px solid white;
+    
     justify-content: right;
     margin-left: 100px;
+    
 }
 
 
 .subscribe-section button {
+    padding-top: 2%;
     margin-left: 100px;
     color: #f0f0f0;
     background-color: black;
@@ -303,8 +312,8 @@ footer {
 }
 
 .subscribe-section button:hover {
-    background-color: #333;
-    color: #fff;
+   
+    color: #333;
 }
 
 .footer-bottom {
@@ -365,8 +374,6 @@ footer {
     gap: 20px; /* Space between images */
     transition:  transform 0.4s ease;
     overflow-x: auto; /* Allow horizontal scrolling */
-    
-    
     scrollbar-width: none;
     align-items: center;
     align-content: center;
@@ -376,16 +383,14 @@ footer {
 }
 
 .logos-container img ,.logos-container2 img{
-    width: 140px;
+    width: 200px;
+    
 }
 .logos-container a:hover,.logos-container2 a:hover{
     cursor: pointer;
 }
 
-.brand-logo {
-    width: 100px;
-    height: auto;
-}
+
 
 .slide-btn {
     background-color:transparent;
@@ -398,15 +403,26 @@ footer {
     transform: translateY(-50%);
     font-size: 24px;
     z-index: 100;
-    margin-right: 9%;
-    margin-left: 9%;
+    padding : 1%;
+    margin-right: 5%;
+    margin-left: 5%;
     
 }
 
 .left {
+    
     left: 0;
 }
 
 .right {
     right: 0;
+}.brands-heading {
+    margin-top: 10%;
+    text-align: center; /* Center the text horizontally */
+    margin-bottom: 20px; /* Space between the heading and the slider */
+}
+
+.brands-heading p {
+    font-size: 24px; /* Adjust font size as needed */
+    margin: 0; /* Remove default margin */
 }
