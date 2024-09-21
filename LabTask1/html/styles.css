@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+footer{
+    background-color: #000;
+}
+header{
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    background-color:white;
+    
+}
+
+header img{
+    padding-top: 1px;
+    width: 24px;
+}
+.contact-bar {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 4px;
+    margin: 0;
+}
+
+
+
+.contact-bar-info {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11.6px;
+    justify-content: center;
+    text-align: center;
+    color: #fafafa;
+}
+
+
+.email-link {
+    color: #fafafa;
+}
+
+.link-bar {
+    padding: 8px;
+    display: flex;
+    justify-content: right;
+    margin-right: 2%;
+    
+    
+}
+
+.link-bar li {
+    display: inline-block;
+    padding: 2.5px;
+}
+
+.link-bar a img {
+    width: 24px;
+}
+
+
+.raja-sahib-logo {
+    text-align: center;
+    
+}
+
+.raja-sahib-logo a img {
+    width: 180px;
+}
+.custom-search-icon-color{
+    color: #000;
+}
+.scrolling-navbar-container {
+    display: flex;
+    scroll-behavior: smooth;
+    width: 80%; /* Adjust width based on the button sizes */
+    justify-content: center;
+}
+
+.navbar-nav li {
+    display: inline-block;
+}
+
+.navbar-nav .nav-link {
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+.scrolling-navbar-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for a cleaner look */
+}
+
+/* Optional: Add hover effects for the buttons */
+#prev-btn, #next-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0 10px;
+}
+
+#prev-btn:hover, #next-btn:hover {
+    background-color: #f1f1f1;
+}
+
+.main-image img{
+    scrollbar-width:none;
+}
+
+.sale-icons {
+    width: 100%; /* Full-width container */
+}
+
+.sale-icon1 {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    margin: 5px; /* Space between the boxes */
+    min-width: 150px; /* Minimum width to avoid them shrinking too much */
+}
+.icon-link {
+    color: #000;
+    margin-left: 10px; /* Space between icons */
+    padding: 5px;
+    font-size: 1.5rem; /* Adjust size as needed */
+}
+.nav-container{
+    overflow: hidden;
+}
+
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    min-width: 200px;
+    padding: 20Px;
+}
+
+.footer-logo {
+    max-width: 3000px;
+   
+}
+
+.social-icons {
+    
+    color: #000;
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    padding-top: 30px;
+}
+
+.social-icons img {
+    width: 34px;
+    height: 34px;
+    background-color: #000;
+}
+
+.payment-methods img {
+   padding-top: 200px;
+   padding-bottom: 20px;
+}
+
+
+
+
+
+
+
+.subscribe-section input {
+    background-color: transparent;
+    margin-bottom: 3px;
+    width: 70%;
+    border: none;
+    border-bottom: 1px solid white;
+    
+    justify-content: right;
+   
+    
+}
+
+
+.subscribe-section button {
+    padding-top: 2%;
+    
+    color: #f0f0f0;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.subscribe-section button:hover {
+   
+    color: #333;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.footer-bottom a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+
+
+
+ul.list-unstyled {
+    padding-left: 0;
+}
+
+ul.list-unstyled li a {
+    color: #9f9b9b; /* Default link color */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Makes the clickable area span full width */
+    padding: 5px 0; /* Adds some spacing between links */
+}
+
+ul.list-unstyled li a:hover {
+    color: white; /* Changes text color to white on hover */
+}
+
+/* Optional: Add hover effect for more interaction feedback */
+ul.list-unstyled li:hover {
+    background-color: #333; /* Background change on hover */
+    transition: background-color 0.3s ease;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+    
+}
+
+.logos-wrapper {
+    width: 90%;
+    overflow: hidden;
+    max-height: auto;
+    margin-right: 12%;
+    margin-left: 12%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.logos-container {
+    display: flex; 
+    gap: 20px; 
+    transition: transform 0.4s ease;
+    overflow-x: auto; 
+    scrollbar-width: none;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    
+}
+.logos-container2{
+    display: flex; 
+    gap: 20px;
+    transition:  transform 0.4s ease;
+    overflow-x: auto; 
+    scrollbar-width: none;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    
+    
+}
+
+.logos-container img ,.logos-container2 img{
+    width: 200px;
+    
+}
+.logos-container a:hover,.logos-container2 a:hover{
+    cursor: pointer;
+}
+
+
+
+.slide-btn {
+    background-color:transparent;
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    z-index: 100;
+    padding : 1%;
+    margin-right: 5%;
+    margin-left: 5%;
+    
+}
+
+.left {
+    
+    left: 0;
+}
+
+.right {
+    right: 0;
+
+
+}
+.brands-heading {
+    margin-top: 10%;
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.brands-heading p{
+    font-size: 24px;
+    margin: 0; 
+}
+.end-of-season-images {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px; /* This will control the spacing between images */
+}
+
+.end-of-season-images a img {
+    width: 100%;
+    height: auto;
+    max-width: 1000px; /* Default width for images */
+}
+
