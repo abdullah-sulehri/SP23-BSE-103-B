@@ -121,7 +121,8 @@ header img{
     padding: 20px;
     text-align: center;
     margin: 5px; /* Space between the boxes */
-    min-width: 150px; /* Minimum width to avoid them shrinking too much */
+    min-width: 10px;
+     /* Minimum width to avoid them shrinking too much */
 }
 .icon-link {
     color: #000;
@@ -169,11 +170,12 @@ footer {
     gap: 15px;
     margin-top: 10px;
     padding-top: 30px;
+    
 }
 
 .social-icons img {
-    width: 34px;
-    height: 34px;
+    width: 24px;
+    height: 24px;
     background-color: #000;
 }
 
@@ -181,12 +183,6 @@ footer {
    padding-top: 200px;
    padding-bottom: 20px;
 }
-
-
-
-
-
-
 
 .subscribe-section input {
     background-color: transparent;
@@ -362,4 +358,87 @@ ul.list-unstyled li:hover {
     height: auto;
     max-width: 1000px; /* Default width for images */
 }
+
+.heading-box {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+.banner-heading {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    border-bottom: 1px solid #d7d4d4;
+    text-transform: uppercase;
+}
+
+.summer-unstitched-images {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px; /* This will control the spacing between images */
+}
+
+.summer-unstitched-images a img {
+    width: 100%;
+    height: auto;
+    max-width: 1000px; /* Default width for images */
+}
+.festive-unstitched-images {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px; /* This will control the spacing between images */
+}
+
+.festive-unstitched-images a img {
+    width: 100%;
+    height: auto;
+    max-width: 1000px; /* Default width for images */
+}
+
+.budget-images {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px; /* This will control the spacing between images */
+}
+
+.budget-images a img {
+    width: 100%;
+    height: auto;
+    max-width: 1000px; /* Default width for images */
+}
+
+.new-arrival-images {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px; /* This will control the spacing between images */
+}
+
+.new-arrival-images a img {
+    width: 100%;
+    height: auto;
+    max-width: 1000px; /* Default width for images */
+}
+
+.men-wear-images {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px; /* This will control the spacing between images */
+}
+
+.men-wear-images a img {
+    width: 100%;
+    height: auto;
+    max-width: 1000px; /* Default width for images */
+}
+
+.carousel-control-prev-icon {
+    filter: invert(100%); /* This makes the icon black */
+}
+
+/* For the next button icon */
+.carousel-control-next-icon {
+    filter: invert(100%); /* This makes the icon black */
+    
+}
+
 
