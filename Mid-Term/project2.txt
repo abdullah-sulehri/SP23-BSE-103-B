@@ -1,0 +1,3 @@
+Car Showroom Management System
+--------------------------------
+This system was developed using Java OOP concepts. It manages a car showroom's daily activities such as buying and selling cars, keeping track of stock, maintaining customer records, and managing employee details. The application leverages Java’s Object-Oriented capabilities, handling real-world scenarios through classes and objects.

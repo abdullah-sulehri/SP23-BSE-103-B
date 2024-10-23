@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Abdullah - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../Mid-Term/intern2.jpg" alt="Logo" width="40px" height="40px">
+            <span>MUHAMMAD ABDULLAH</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="https://www.linkedin.com/in/muhammad-abdullah-861a6b253/" target="_blank"> <img src="../Mid-Term//icons8-linkedin-50.png" width="30px"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+           
+            <div class="hero-text">
+                <h1>HEY, I'M MUHAMMAD ABDULLAH</h1>
+                <p>A Backend focused Web Developer building the backend of Web Applications that leads to the success of the overall product.</p>
+            </div>
+        </section>
+
+        <!-- Projects Section (on Home Screen) -->
+        <section class="projects" id="projects">
+            <h2>Projects</h2>
+            
+            <!-- Semester 1 Projects -->
+            <div class="semester">
+                <h3>Semester 1 Projects</h3>
+                
+                <!-- Project 1 -->
+                <div class="project">
+                    <h4>Chess Game</h4>
+                    <p>A Basic offline multiplayer text-based chess game built in C++.</p>
+                    <button onclick="loadDescription('project1.txt', 'description1')">Show Details</button>
+                    <div class="description" id="description1">
+                        <p >Chess Game
+                            -----------
+                            This project is a console-based offline multiplayer chess game developed in C++. The game includes basic features like moving pieces, capturing, check, and checkmate. Players can use text-based commands to play the game. The primary goal was to learn game development basics and improve problem-solving skills using C++.
+                            </p>
+
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Semester 2 Projects -->
+            <div class="semester">
+                <h3>Semester 2 Projects</h3>
+                
+                <!-- Project 2 -->
+                <div class="project">
+                    <h4>Car Showroom Management System</h4>
+                    <p>A car showroom Management System built using Java OOP concepts which handles buying, selling of cars, and maintains records of staff and customers.</p>
+                    <button onclick="loadDescription('project2.txt', 'description2')">Show Details</button>
+                    <div class="description" id="description2"></div>
+                </div>
+            </div>
+        
+            <!-- Semester 3 Projects -->
+            <div class="semester">
+                <h3>Semester 3 Projects</h3>
+                
+                <!-- Project 3 -->
+                <div class="project">
+                    <h4>MarketPlace Backend (Game-Swap)</h4>
+                    <p>A server-side project for handling basic backend operations of a marketplace site.</p>
+                    <button onclick="loadDescription('project3.txt', 'description3')">Show Details</button>
+                    <div class="description" id="description3">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

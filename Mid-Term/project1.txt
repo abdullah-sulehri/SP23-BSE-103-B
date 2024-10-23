@@ -1,0 +1,3 @@
+Chess Game
+-----------
+This project is a console-based offline multiplayer chess game developed in C++. The game includes basic features like moving pieces, capturing, check, and checkmate. Players can use text-based commands to play the game. The primary goal was to learn game development basics and improve problem-solving skills using C++.

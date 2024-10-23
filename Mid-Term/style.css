@@ -1,0 +1,203 @@
+/* style.css */
+
+/* Basic Reset */
+body, h1, h2, h3, h4, p, ul {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+body {
+    background: #f8f8f8;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+   
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Hero Section Styles */
+.hero {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background: black url('../Mid-Term/32993994_840843081452.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.hero-text {
+    color: white;
+    text-align: center;
+}
+
+.hero-text h1 {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+/* Projects Section Styles */
+.projects {
+    padding: 40px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 1200px; /* Center the section and set max width */
+}
+
+.projects h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.semester {
+    margin-bottom: 40px;
+}
+
+.semester h3 {
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Project Card Styles */
+/* Enhanced Projects Section Styles */
+.projects {
+    padding: 60px 20px;
+    background-color: #f0f4f8; /* Light background for contrast */
+    margin: 40px auto;
+    max-width: 1200px;
+    border-radius: 12px; /* Rounded corners for the section */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+/* Enhanced Projects Heading */
+.projects h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Semester Section Styling */
+.semester {
+    margin-bottom: 50px;
+}
+
+.semester h3 {
+    font-size: 26px;
+    color: #444;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    border-left: 4px solid #ff7f50; /* Add a colored border to the heading */
+}
+
+/* Enhanced Project Card Styles */
+.project {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Deeper shadow for more effect */
+    margin-bottom: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.project:hover {
+    transform: translateY(-8px); /* More noticeable lift */
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Title Styling */
+.project h4 {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+/* Project Summary Styling */
+.project p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Description Container Styling */
+.description {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: none; /* Initially hidden */
+    animation: fadeIn 0.5s ease;
+}
+
+/* Button Styling */
+button {
+    padding: 12px 25px;
+    background-color: #ff7f50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #ff4500;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds some space between the image and the text */
+}
+
+.logo img {
+    border-radius: 50%; /* Optional: Make the logo circular */
+}
