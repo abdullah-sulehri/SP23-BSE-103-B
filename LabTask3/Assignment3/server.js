@@ -18,10 +18,14 @@ server.get("/portfolio",(req,res)=>{
     res.render("portfolio")
 });
 
-// server.get("/admin",(req,res)=>{
-//     res.render("admin")
-// });
+server.get("/admin",(req,res)=>{
+    res.render("admin")
+});
 
-server.listen(5020,()=> {    
+server.get("/createproduct",(req,res)=>{
+    res.render("createproduct")
+})
+
+server.listen(5030,()=> {    
     console.log(`server created at local host 5020`);
 });
