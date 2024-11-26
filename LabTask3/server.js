@@ -1,5 +1,7 @@
 const express = require("express");
 let server = express();
+const bodyParser = require("body-parser");
+
 server.use(express.urlencoded({ extended: true }));
 
 
@@ -11,11 +13,11 @@ var expressLayouts = require("express-ejs-layouts");
 let adminProductsRouter = require("./routes/admin/products.controller");
 server.use(adminProductsRouter);
 
-let addProductRouter = require("./routes/admin/addProduct.controller");
-server.use(addProductRouter);
+server.use(bodyParser.urlencoded({ extended: true })); // For forms
+server.use(bodyParser.json()); 
 
 server.use(express.static("public"));
-// server.use(expressLayouts);
+server.use(expressLayouts);
 
 const mongoose = require("mongoose");
 

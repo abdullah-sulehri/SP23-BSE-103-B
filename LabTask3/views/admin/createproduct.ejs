@@ -1,100 +1,102 @@
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../styles.css">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../styles.css">
-    <style>
-      
-body{
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f5f5f5;
-}
-#CheckoutForm{
-    justify-content: center;
-}
-.form-container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
-}
-.heading-box{
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-}
-.id-field{
-    margin-bottom: 1%;
-}
-.brand-field{
-    margin-bottom: 1%;
-}
-.title-field{
-    margin-bottom: 1%;
-}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f5f5f5;
+    }
 
-.price-field{
-    margin-bottom: 1%;
-}
-.description-field{
-    margin-bottom: 1%;
-}
-#submit-btn{
-    background-color: #28a745;
-    color: white; /* Ensures good contrast */
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    
-}
+    #CheckoutForm {
+        justify-content: center;
+    }
 
-    </style>
-    <title>Document/title>
-</head>
+    .form-container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 500px;
+    }
+
+    .heading-box {
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .id-field {
+        margin-bottom: 1%;
+    }
+
+    .brand-field {
+        margin-bottom: 1%;
+    }
+
+    .title-field {
+        margin-bottom: 1%;
+    }
+
+    .price-field {
+        margin-bottom: 1%;
+    }
+
+    .description-field {
+        margin-bottom: 1%;
+    }
+
+    #submit-btn {
+        background-color: #28a745;
+        color: white;
+        /* Ensures good contrast */
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+
+    }
+</style>
+
 <body>
-<h3><%-pageTitle  %></h3>
-  <div class="form-container" id="checkoutForm">
-    <form id="CheckoutForm" >
-        <div class="heading-box">
-            <h1>Add Product Form</h1>
-        </div>
-        <div class="id-field">
-          <input id="id" type="text" class="form-control" id="inputId" placeholder="Id">
-          <span id="error-message-id" style="display: none;"> *Product id  is Required </span>
-      </div>
-        <div class="brand-field">
-            <input id="brand" type="text" class="form-control" id="InputName" placeholder="Brand">
-            <span id="error-message-brand" style="display: none;"> *Brand Name is Required </span>
-        </div>
-        <div class="title-field">
-            <input id="title" type="text" class="form-control" id="InputEmail" placeholder="Title">
-            <span id="error-message-title" style="display: none;"> *Title is Required </span>
-        </div>
-
-        <div class="price-field">
-            <input id="price" type="number" class="form-control" id="inputPrice" placeholder="Price">
-            <span id="error-message-price" style="display: none;"> *Price is Required </span>
-        </div>
-
-        <div class="description-field">
-            <input id="description" type="text" class="form-control" id="inputDescription" placeholder="Description">
-            <span id="error-message-description" style="display: none;"> *Description is Required </span>
-        </div>
-        <input type="submit" id="submit-btn">
-
-    </form>
-</div>
     
+    <div class="form-container">
+        <form method="post" action="/admin/products/create"  id="CheckoutForm">
+            <div class="heading-box">
+                <h1>Add Product Form</h1>
+            </div>
+            <div class="id-field">
+                <input id="id" name="id" type="text" class="form-control" id="inputId" placeholder="Id">
+                <span id="error-message-id" style="display: none;"> *Product id is Required </span>
+            </div>
+            <div class="brand-field">
+                <input id="brand" name ="brand" type="text" class="form-control" id="InputName" placeholder="Brand">
+                <span id="error-message-brand" style="display: none;"> *Brand Name is Required </span>
+            </div>
+            <div class="title-field">
+                <input id="title" name="title" type="text" class="form-control" id="InputEmail" placeholder="Title">
+                <span id="error-message-title" style="display: none;"> *Title is Required </span>
+            </div>
+
+            <div class="price-field">
+                <input id="price" name="price" type="number" class="form-control" id="inputPrice" placeholder="Price">
+                <span id="error-message-price" style="display: none;"> *Price is Required </span>
+            </div>
+
+            <div class="description-field">
+                <input id="description" name="description" type="text" class="form-control" id="inputDescription"
+                    placeholder="Description">
+                <span id="error-message-description" style="display: none;"> *Description is Required </span>
+            </div>
+            <input type="submit" id="submit-btn">
+
+        </form>
+    </div>
+
 </body>
-</html>
