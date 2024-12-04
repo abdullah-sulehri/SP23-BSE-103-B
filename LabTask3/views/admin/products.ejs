@@ -48,6 +48,7 @@
                 <th>Title</th>
                 <th>Price</th>
                 <th>Description</th>
+                <th>Category</th>
                 <th>Picture</th>
                 <th>Actions</th>
             </tr>
@@ -61,6 +62,7 @@
                     <td><%= products[index].title %></td>
                     <td><%= products[index].price %></td>
                     <td><%= products[index].description %></td>
+                    <td><%= products[index].category.name %></td>
                     <td><img src="/<%= products[index].picture %>" width="100px"/></td>
                     <td>
                         <a href="/admin/products/edit/<%= products[index]._id %>" class="btn btn-warning">Edit</a>

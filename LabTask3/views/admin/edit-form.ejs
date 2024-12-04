@@ -33,6 +33,18 @@
                 placeholder="Description">
             <span id="error-message-description" style="display: none;"> *Description is Required </span>
         </div>
+        <div>
+            <label for="category">Category:</label>
+            <select name="category" id="category" required>
+              <% categories.forEach(category => { %>
+                <option value="<%= category._id %>" <%= category._id.equals(product.category._id) ? 'selected' : '' %>>
+                  <%= category.name %>
+                </option>
+              <% }) %>
+            </select>
+        </div>
+         
+  
         <button class="btn btn-info">Edit New Product</button>
       </div>
 

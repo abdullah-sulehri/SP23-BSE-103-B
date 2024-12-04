@@ -64,7 +64,7 @@
     }
 </style>
 
-<body>
+<!-- <body>
     
     <div class="form-container">
         <form method="post" enctype="multipart/form-data" action="/admin/products/create"  id="CheckoutForm">
@@ -94,6 +94,7 @@
                     placeholder="Description">
                 <span id="error-message-description" style="display: none;"> *Description is Required </span>
             </div>
+
             <div class="form-group">
                 <label for="titleInput">Picture</label>
                 <input name="file" type="file" class="form-control" id="titleInput" aria-describedby="emailHelp" placeholder="Enter Title" value="IPhone" />
@@ -103,4 +104,53 @@
         </form>
     </div>
 
+</body> -->
+<body>
+    <div class="form-container">
+        <form method="post" enctype="multipart/form-data" action="/admin/products/create" id="CheckoutForm">
+            <div class="heading-box">
+                <h1>Add Product Form</h1>
+            </div>
+            <div class="id-field">
+                <input id="id" name="id" type="text" class="form-control" placeholder="Id">
+                <span id="error-message-id" style="display: none;"> *Product id is Required </span>
+            </div>
+            <div class="brand-field">
+                <input id="brand" name="brand" type="text" class="form-control" placeholder="Brand">
+                <span id="error-message-brand" style="display: none;"> *Brand Name is Required </span>
+            </div>
+            <div class="title-field">
+                <input id="title" name="title" type="text" class="form-control" placeholder="Title">
+                <span id="error-message-title" style="display: none;"> *Title is Required </span>
+            </div>
+
+            <div class="price-field">
+                <input id="price" name="price" type="number" class="form-control" placeholder="Price">
+                <span id="error-message-price" style="display: none;"> *Price is Required </span>
+            </div>
+
+            <div class="description-field">
+                <input id="description" name="description" type="text" class="form-control" placeholder="Description">
+                <span id="error-message-description" style="display: none;"> *Description is Required </span>
+            </div>
+            <div class="form-group">
+                <label for="categorySelect">Category</label>
+                <select id="categorySelect" name="category" class="form-control">
+                    <% categories.forEach(function(category) { %>
+                        <option value="<%= category._id %>"><%= category.name %></option>
+                    <% }) %>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fileInput">Picture</label>
+                <input name="file" type="file" class="form-control" id="fileInput" />
+            </div>
+
+            <!-- New Category Dropdown -->
+            
+
+            <input type="submit" id="submit-btn">
+        </form>
+    </div>
 </body>
+

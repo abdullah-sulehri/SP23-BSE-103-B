@@ -21,6 +21,11 @@ const productSchema = mongoose.Schema(
     price: { type: Number, required: true, min: 0 },
     description: { type: String, lowercase: true, trim: true },
     picture: {type : String},
+    category: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "category", // Reference to the Category model
+      required: true,
+    },
     
   },
   { timestamps: true }
