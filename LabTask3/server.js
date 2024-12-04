@@ -41,7 +41,7 @@ server.use(express.static("uploads"));
 const mongoose = require("mongoose");
 
 mongoose
-    .connect('mongodb+srv://abSulehri:dKBh0V1jAd1HoYzs@cluster0.6bjcq.mongodb.net/' , { // Connect to the database only
+    .connect('mongodb+srv://abSulehri:dKBh0V1jAd1HoYzs@cluster0.6bjcq.mongodb.net/RajaSahib' , { // Connect to the database only
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })

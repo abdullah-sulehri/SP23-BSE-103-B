@@ -21,8 +21,9 @@ const categorySchema = new mongoose.Schema(
     },
     
     status: {
-        type: Boolean,
-        default: true, // true for active, false for inactive
+        type: String,
+        required: true,
+        lowercase: true, // true for active, false for inactive
     },
     created_at: {
         type: Date,

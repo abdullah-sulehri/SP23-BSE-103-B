@@ -19,7 +19,7 @@ const upload = multer({ storage: storage });
 // To Get Products
 router.get("/admin/products", async (req, res) => {
   try {
-    const products = await Product.find().populate("category", "name description"); // Populate category details
+    const products = await Product.find().populate("category", "name "); // Populate category details
 
     return res.render("admin/products", {
       pageTitle: "Products Management",
@@ -50,8 +50,8 @@ router.get("/admin/products/create", async (req, res) => {
 router.post("/admin/products/create", upload.single("file"), async (req, res) => {
   console.log(req.body);
   try {
-  
-    let newProduct=new Product(req.body);
+
+    let newProduct = new Product(req.body);
 
     if (req.file) {
       console.log(req.file.filename);
@@ -98,7 +98,7 @@ router.get("/admin/products/edit/:id", async (req, res) => {
 
 router.post("/admin/products/edit/:id", async (req, res) => {
   try {
-   
+
 
     const product = await Product.findById(req.params.id);
     product.id = req.body.id;
@@ -106,7 +106,7 @@ router.post("/admin/products/edit/:id", async (req, res) => {
     product.brand = req.body.brand;
     product.description = req.body.description;
     product.price = req.body.price;
-    product.category = req.body.category; // Update the category
+    product.category = req.body.category; 
 
     await product.save();
     return res.redirect("/admin/products");
