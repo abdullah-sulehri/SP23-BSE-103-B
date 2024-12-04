@@ -67,7 +67,7 @@
 <body>
     
     <div class="form-container">
-        <form method="post" action="/admin/products/create"  id="CheckoutForm">
+        <form method="post" enctype="multipart/form-data" action="/admin/products/create"  id="CheckoutForm">
             <div class="heading-box">
                 <h1>Add Product Form</h1>
             </div>
@@ -94,6 +94,10 @@
                     placeholder="Description">
                 <span id="error-message-description" style="display: none;"> *Description is Required </span>
             </div>
+            <div class="form-group">
+                <label for="titleInput">Picture</label>
+                <input name="file" type="file" class="form-control" id="titleInput" aria-describedby="emailHelp" placeholder="Enter Title" value="IPhone" />
+              </div>
             <input type="submit" id="submit-btn">
 
         </form>

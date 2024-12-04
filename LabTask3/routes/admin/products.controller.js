@@ -1,9 +1,23 @@
 
 const express = require("express");
+let Product = require("../../models/product.model");
 let router = express.Router();
 
+const multer = require('multer');
 
-const Product = require("../../models/product.model")
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "./uploads"); // Directory to store files
+  },
+  filename: function (req, file, cb) {
+    cb(null, `${Date.now()}-${file.originalname}`); // Unique file name
+  },
+});
+const upload = multer({ storage: storage });
+
+
+
+
 //To Get Products
 router.get("/admin/products", async (req, res) => {
   try {
@@ -33,10 +47,15 @@ router.get("/admin/products/create", (req, res) => {
 
 //route to handle create product form submission
 // demonstrates PRG Design Pattern (Post Redirect GET)
-router.post("/admin/products/create", async (req, res) => {
+router.post( "/admin/products/create", upload.single('file'), async (req, res) => {
   console.log(req.body)
   try {
       let newProduct = new Product(req.body); // Mongoose auto-validates based on the schema
+      if (req.file) {
+        console.log(req.file.filename)
+        newProduct.picture = req.file.filename;
+      }
+      
       await newProduct.save();
       res.redirect("/admin/products");
   } catch (error) {
@@ -63,9 +82,23 @@ router.get("/admin/products/delete/:id",async (req,res)=>{
 })
 
 //edit Product
-router.get("/admin/products/edit/:id" ,async (req,res)=>{
-  
-})
+router.get("/admin/products/edit/:id", async (req, res) => {
+  let product = await Product.findById(req.params.id);
+  return res.render("admin/edit-form", {
+    layout: "adminlayout",
+    product,
+  });
+});
+router.post("/admin/products/edit/:id", async (req, res) => {
+  let product = await Product.findById(req.params.id);
+  product.id=req.body.id;
+  product.title = req.body.title;
+  product.brand=req.body.brand;
+  product.description = req.body.description;
+  product.price = req.body.price;
+  await product.save();
+  return res.redirect("/admin/products");
+});
 
 module.exports = router;
 

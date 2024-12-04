@@ -24,7 +24,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/admin/products">Dashboard</a>
+                <a class="nav-link active" aria-current="page" href="/admin/category">Categories</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/admin/products">Products</a>
@@ -48,6 +48,7 @@
                 <th>Title</th>
                 <th>Price</th>
                 <th>Description</th>
+                <th>Picture</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -55,11 +56,12 @@
             
             <% for( let index = 0; index < products.length; index++ ) { %>
                 <tr>
-                    <td><%= products[index]._id %></td>
+                    <td><%= products[index].id %></td>
                     <td><%= products[index].brand %></td>
                     <td><%= products[index].title %></td>
                     <td><%= products[index].price %></td>
                     <td><%= products[index].description %></td>
+                    <td><img src="/<%= products[index].picture %>" width="100px"/></td>
                     <td>
                         <a href="/admin/products/edit/<%= products[index]._id %>" class="btn btn-warning">Edit</a>
                         <a href="/admin/products/delete/<%= products[index]._id %>" class="btn btn-danger">Delete</a>
