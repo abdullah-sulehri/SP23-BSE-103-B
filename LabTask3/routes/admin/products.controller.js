@@ -22,6 +22,7 @@ router.get("/admin/products", async (req, res) => {
     const products = await Product.find().populate("category", "name "); // Populate category details
 
     return res.render("admin/products", {
+      
       pageTitle: "Products Management",
       products: products,
     });
@@ -37,6 +38,7 @@ router.get("/admin/products/create", async (req, res) => {
     const categories = await Category.find(); // Fetch all categories
     return res.render("admin/createproduct", {
       layout: "adminLayout",
+     // StyleSheet:"/styles/create-product-form.css",
       categories: categories, // Pass categories to the view
     });
   } catch (error) {
