@@ -37,8 +37,9 @@ router.get("/admin/products/create", async (req, res) => {
   try {
     const categories = await Category.find(); // Fetch all categories
     return res.render("admin/createproduct", {
+      pageTitle:"Create Product",
       layout: "adminLayout",
-     // StyleSheet:"/styles/create-product-form.css",
+      styles: "/styles/create-product-form.css",
       categories: categories, // Pass categories to the view
     });
   } catch (error) {

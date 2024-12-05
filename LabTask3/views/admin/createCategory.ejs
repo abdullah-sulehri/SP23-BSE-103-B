@@ -3,68 +3,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="../styles.css">
 
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #f5f5f5;
-    }
 
-    #CheckoutForm {
-        justify-content: center;
-    }
+<link rel="stylesheet" href="<%= styles %>">
+<title><%-pageTitle%></title>
 
-    .form-container {
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 500px;
-    }
 
-    .heading-box {
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-    }
-
-    .id-field {
-        margin-bottom: 1%;
-    }
-
-    .brand-field {
-        margin-bottom: 1%;
-    }
-
-    .title-field {
-        margin-bottom: 1%;
-    }
-
-    .price-field {
-        margin-bottom: 1%;
-    }
-
-    .description-field {
-        margin-bottom: 1%;
-    }
-
-    #submit-btn {
-        background-color: #28a745;
-        color: white;
-        /* Ensures good contrast */
-        border: none;
-        padding: 5px 10px;
-        border-radius: 5px;
-        cursor: pointer;
-
-    }
-</style>
-
-<body>
     
     <div class="form-container">
         <form method="post" action="/admin/category/create"  id="CheckoutForm">
@@ -106,4 +49,4 @@
     </div>
     
 
-</body>
+

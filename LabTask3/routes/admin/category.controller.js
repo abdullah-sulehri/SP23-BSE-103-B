@@ -10,8 +10,9 @@ router.get("/admin/category", async (req, res) => {
     const categories = await category.find();
 
     return res.render("admin/category", {
-      layout: "adminlayout",
-      pageTitle: "Products Management",
+      pageTitle: "Category List",
+      layout: "adminLayout",
+      styles: "/styles/create-category-form.css",
       categories,
     });
   } catch (err) {
@@ -26,7 +27,9 @@ router.get("/admin/category/create", (req, res) => {
   
     return res.render("admin/createCategory",
       {
+        pageTitle: "Add Category",
         layout: "adminLayout",
+       
   
       });
    
@@ -49,8 +52,9 @@ router.get("/admin/category/create", (req, res) => {
   router.get("/admin/category", async (req, res) => {
     let categories = await category.find();
     return res.render("admin/category", {
-      layout: "adminlayout",
+      layout: "adminLayout",
       pageTitle: "Manage Your Products",
+      
       categories,
     });
   });
