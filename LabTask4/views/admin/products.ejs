@@ -40,6 +40,41 @@
   
   
   <a href="/admin/products/create" class="btn btn-info">Create New Product</a>
+  <form method="GET" action="/admin/products" class="d-flex mb-4 mt-2">
+    <input 
+        type="text" 
+        name="search" 
+        class="form-control me-2" 
+        placeholder="Search by product name..." 
+        value="<%= searchQuery || '' %>"
+    />
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+<!-- Filter by Category -->
+<form method="GET" action="/admin/products" class="d-flex mb-4 mt-2">
+    <select name="category" class="form-select me-2">
+        <option value="">All Categories</option>
+        <% categories.forEach(category => { %>
+            <option 
+                value="<%= category.name %>" 
+                <%= category.name === selectedCategory ? 'selected' : '' %>>
+                <%= category.name %>
+            </option>
+        <% }) %>
+    </select>
+    <button type="submit" class="btn btn-primary">Filter</button>
+    <!-- Sorting Dropdown -->
+    <select name="sort" class="form-select me-2">
+        <option value="">Sort By</option>
+        <option value="priceLow" <%= selectedSort === 'priceLow' ? 'selected' : '' %>>Price: Low to High</option>
+        <option value="priceHigh" <%= selectedSort === 'priceHigh' ? 'selected' : '' %>>Price: High to Low</option>
+        <option value="asc" <%= selectedSort === 'asc' ? 'selected' : '' %>>Alphabetical: A to Z</option>
+        <option value="desc" <%= selectedSort === 'desc' ? 'selected' : '' %>>Alphabetical: Z to A</option>
+    </select>
+
+    <button type="submit" class="btn btn-primary">SORT</button>
+</form>
   <table class="table">
     <thead>
       <tr>

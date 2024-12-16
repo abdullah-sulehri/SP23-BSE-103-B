@@ -65,14 +65,59 @@ router.get("/admin/products/:page?", async (req, res) => {
   let totalRecords = await Product.countDocuments();
   let totalPages = Math.ceil(totalRecords / pageSize);
   try {
-    const products = await Product.find().populate("category", "name ") // Populate category details
-      .limit(pageSize)
-      .skip((page - 1) * pageSize);
+    const categories = await Category.find();
+    // const products = await Product.find().populate("category", "name ") // Populate category details
+    //   .limit(pageSize)
+    //   .skip((page - 1) * pageSize);
+      const searchQuery = req.query.search || "";
+      const categoryFilter = req.query.category || ""; // Get the category filter from the query parameters
+      const sortQuery = req.query.sort || ""; // Get the sort query parameter
+  
+      // Construct filter object for search and category
+      const filter = {};
+      if (searchQuery) {
+        filter.name = { $regex: searchQuery, $options: "i" }; // Case-insensitive search by name
+      }
+      if (categoryFilter) {
+        // Find the category by title to get its _id
+        const category = await Category.findOne({ title: categoryFilter });
+        if (category) {
+          filter.name = category.name; // Match categoryId in products
+        } else {
+          console.log(`No category found for title: ${categoryFilter}`);
+          // Skip the filtering if no matching category is found
+        }
+      }
+  
+      // Determine the sorting order
+      let sort = {};
+      if (sortQuery === "priceLow") {
+        sort.price = 1; // Price Low to High
+      } else if (sortQuery === "priceHigh") {
+        sort.price = -1; // Price High to Low
+      } else if (sortQuery === "asc") {
+        sort.name = 1; // Alphabetical A to Z
+      } else if (sortQuery === "desc") {
+        sort.name = -1; // Alphabetical Z to A
+      }
+  
+      // Fetch products based on the filter and sort criteria
+      const products = await Product.find(filter)
+        .populate("category", "name") // Populate category details
+        .skip((page - 1) * pageSize)
+        .limit(pageSize)
+        .sort(sort);
+  
+  
 
     return res.render("admin/products", {
       layout: "adminLayout",
       pageTitle: "Products Management",
+      searchQuery,
       products,
+      categories,
+      selectedCategory: categoryFilter,
+      selectedSort: sortQuery,
       page,
       pageSize,
       totalPages,
