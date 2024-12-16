@@ -15,33 +15,19 @@ const storage = multer.diskStorage({
   },
 });
 const upload = multer({ storage: storage });
-
-// To Get Products
-router.get("/admin/products", async (req, res) => {
-  try {
-    const products = await Product.find().populate("category", "name "); // Populate category details
-
-    return res.render("admin/products", {
-      
-      pageTitle: "Products Management",
-      products: products,
-    });
-  } catch (err) {
-    console.error("Error fetching products:", err);
-    res.status(500).send("Error fetching products from the database.");
-  }
-});
-
-// To Add new products
 router.get("/admin/products/create", async (req, res) => {
+  console.log("HERE")
   try {
-    const categories = await Category.find(); // Fetch all categories
+    console.log("HERE")
+    const categories = await Category.find();
+    console.log("HERE") // Fetch all categories
     return res.render("admin/createproduct", {
-      pageTitle:"Create Product",
+      pageTitle: "Create Product",
       layout: "adminLayout",
       styles: "/styles/create-product-form.css",
       categories: categories, // Pass categories to the view
     });
+    console.log("HERE")
   } catch (error) {
     console.error("Error fetching categories:", error);
     res.status(500).send("Error fetching categories.");
@@ -70,6 +56,37 @@ router.post("/admin/products/create", upload.single("file"), async (req, res) =>
       .send("Product creation failed. Please ensure all fields are filled correctly.");
   }
 });
+
+//To Get Products
+router.get("/admin/products/:page?", async (req, res) => {
+  let page = req.params.page;
+  page = page ? Number(page) : 1;
+  let pageSize = 5;
+  let totalRecords = await Product.countDocuments();
+  let totalPages = Math.ceil(totalRecords / pageSize);
+  try {
+    const products = await Product.find().populate("category", "name ") // Populate category details
+      .limit(pageSize)
+      .skip((page - 1) * pageSize);
+
+    return res.render("admin/products", {
+      layout: "adminLayout",
+      pageTitle: "Products Management",
+      products,
+      page,
+      pageSize,
+      totalPages,
+
+    });
+  } catch (err) {
+    console.error("Error fetching products:", err);
+    res.status(500).send("Error fetching products from the database.");
+  }
+});
+
+
+// To Add new products
+
 
 // Delete Product
 router.get("/admin/products/delete/:id", async (req, res) => {
@@ -109,7 +126,7 @@ router.post("/admin/products/edit/:id", async (req, res) => {
     product.brand = req.body.brand;
     product.description = req.body.description;
     product.price = req.body.price;
-    product.category = req.body.category; 
+    product.category = req.body.category;
 
     await product.save();
     return res.redirect("/admin/products");

@@ -46,21 +46,25 @@ mongoose
 
 
 server.get("/",(req,res)=>{
-    res.render("index")
+    res.render("index",{
+        showNavbar: false
+    })
 });
 
 server.get("/portfolio",(req,res)=>{
-    res.render("portfolio")
+    res.render("portfolio",{ showNavbar: false})
 });
 
 server.get("/admin",(req,res)=>{
-    res.render("admin")
+    res.render("admin",{ showNavbar: false})
 });
 
 server.get("/cards", async (req,res)=>{
     const products = await Product.find();
     res.render("product-cards",{
         products: products,
+        showNavbar: true,
+        
     });
 });
 

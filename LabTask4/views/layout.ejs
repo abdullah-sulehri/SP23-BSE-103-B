@@ -13,7 +13,9 @@
   <link rel="stylesheet" href="../public/styles/product-cards-style.cssS">
 </head>
 <body>
-  <%- include('partials/user-navbar') %>
+    <% if (showNavbar) { %>
+        <%- include('partials/user-navbar') %>
+    <% } %>
   <div class="container my-4">
     <%- body %>
   </div>

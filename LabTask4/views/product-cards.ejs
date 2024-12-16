@@ -3,11 +3,11 @@
     <% for( let index=0; index < products.length; index++ ) { %>
     <div class="col">
       <div class="card h-100 shadow-sm">
-        <img src="<%= products[0].picture%>" class="card-img-top" alt="Product 1">
+        <img src="<%= products[index].picture%>" class="card-img-top" alt="Product 1">
         <div class="card-body text-center">
-          <h5 class="card-title"><%= products[0].title %></h5>
-          <p class="card-text text-muted"><%= products[0].description %></p>
-          <p class="card-price text-success fw-bold"><%= products[0].price %></p>
+          <h5 class="card-title"><%= products[index].title %></h5>
+          <p class="card-text text-muted"><%= products[index].description %></p>
+          <p class="card-price text-success fw-bold"><%= products[index].price %></p>
           <a href="#" class="btn btn-outline-primary">Add to Cart</a>
         </div>
       </div>

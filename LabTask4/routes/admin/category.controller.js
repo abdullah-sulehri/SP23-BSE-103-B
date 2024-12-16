@@ -29,7 +29,7 @@ router.get("/admin/category/create", (req, res) => {
       {
         pageTitle: "Add Category",
         layout: "adminLayout",
-       
+        styles:"/styles/create-category-form.css",
   
       });
    
