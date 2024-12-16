@@ -2,6 +2,8 @@ const express = require("express");
 let server = express();
 const bodyParser = require("body-parser");
 const multer = require('multer');
+let Product = require("../LabTask4/models/product.model");
+
 
 
 server.use(express.urlencoded({ extended: true }));
@@ -27,16 +29,6 @@ server.use(express.static("public"));
 server.use(express.static("uploads"));
 
 
-// const storage = multer.diskStorage({
-//     destination: function (req, file, cb) {
-//       cb(null, './uploads'); // Directory to store files
-//     },
-//     filename: function (req, file, cb) {
-//       cb(null, `${Date.now()}-${file.originalname}`); // Unique file name
-//     },
-//   });
-  
-//   const upload = multer({ storage: storage });
 
 const mongoose = require("mongoose");
 
@@ -65,10 +57,12 @@ server.get("/admin",(req,res)=>{
     res.render("admin")
 });
 
-
-
-
-
+server.get("/cards", async (req,res)=>{
+    const products = await Product.find();
+    res.render("product-cards",{
+        products: products,
+    });
+});
 
 server.listen(5030,()=> {    
     console.log(`server created at local host 5030`);

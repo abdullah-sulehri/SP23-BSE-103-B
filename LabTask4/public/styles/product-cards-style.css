@@ -1,0 +1,14 @@
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  .card-price {
+    font-size: 1.25rem;
+  }
+  .btn-outline-primary {
+    transition: all 0.3s ease-in-out;
+  }
+  .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
