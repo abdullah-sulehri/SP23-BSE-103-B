@@ -1,0 +1,26 @@
+.card-img-top {
+    height: 200px;
+    object-fit: fill;
+  }
+  .card-price {
+    font-size: 1.25rem;
+  }
+  .btn-outline-primary {
+    transition: all 0.3s ease-in-out;
+  }
+  .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  .product-img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .product-img:hover {
+    transform: scale(1.1); /* Scales up the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow to make it "pop" */
+  }
+
+  .card {
+    overflow: hidden; /* Ensures that the scaling effect stays within the card boundaries */
+  }
