@@ -5,15 +5,25 @@ let router = express.Router();
 
 const category = require("../../models/category.model")
 //To Get Products
-router.get("/admin/category", async (req, res) => {
+router.get("/admin/category/:page?", async (req, res) => {
+  let page = req.params.page;
+  page = page ? Number(page) : 1;
+  let pageSize = 5;
+  let totalRecords = await category.countDocuments();
+  let totalPages = Math.ceil(totalRecords / pageSize);
   try {
-    const categories = await category.find();
+    const categories = await category.find()
+    .skip((page - 1) * pageSize)
+        .limit(pageSize)
 
     return res.render("admin/category", {
       pageTitle: "Category List",
       layout: "adminLayout",
       styles: "/styles/create-category-form.css",
       categories,
+      page,
+      pageSize,
+      totalPages,
     });
   } catch (err) {
     console.error("Error fetching products:", err);
