@@ -76,14 +76,14 @@ router.get("/admin/products/:page?", async (req, res) => {
       // Construct filter object for search and category
       const filter = {};
       if (searchQuery) {
-        filter.name = { $regex: searchQuery, $options: "i" }; // Case-insensitive search by name
+        filter.title = { $regex: searchQuery, $options: "i" }; // Match title for search
       }
       if (categoryFilter) {
-        // Find the category by title to get its _id
-        const category = await Category.findOne({ title: categoryFilter });
+        const category = await Category.findOne({ name: categoryFilter });
         if (category) {
-          filter.name = category.name; // Match categoryId in products
-        } else {
+          filter.category = category._id; // Match category ID
+        }
+      else {
           console.log(`No category found for title: ${categoryFilter}`);
           // Skip the filtering if no matching category is found
         }
@@ -98,7 +98,7 @@ router.get("/admin/products/:page?", async (req, res) => {
       } else if (sortQuery === "asc") {
         sort.name = 1; // Alphabetical A to Z
       } else if (sortQuery === "desc") {
-        sort.name = -1; // Alphabetical Z to A
+        sort.title = -1; // Alphabetical Z to A
       }
   
       // Fetch products based on the filter and sort criteria

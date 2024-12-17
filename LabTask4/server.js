@@ -62,6 +62,7 @@ server.get("/admin",(req,res)=>{
 server.get("/cards", async (req,res)=>{
     const products = await Product.find();
     res.render("product-cards",{
+       
         products: products,
         showNavbar: true,
         
