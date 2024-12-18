@@ -79,7 +79,7 @@ server.get("/cards", async (req, res) => {
     showNavbar: true
   });
 });
-server.get("/cart", (req, res) => {
+server.get("/cart",authMiddleware, (req, res) => {
     // Check if user is logged in
     if (!req.session.user) {
       return res.redirect("/login"); // Redirect to login page if not logged in
