@@ -1,0 +1,3 @@
+MarketPlace Backend (Game-Swap)
+--------------------------------
+This backend system supports a marketplace website, focusing on handling user accounts, transactions, and product listings for a game-exchange platform. Developed using Node.js and Express, the project includes RESTful APIs for CRUD operations on user data, game listings, and order handling. It was an opportunity to dive deep into backend development.

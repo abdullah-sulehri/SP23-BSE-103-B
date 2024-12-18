@@ -1,0 +1,37 @@
+<style>
+    .card-img-top {
+    height: 200px;
+    object-fit: fill;
+  }
+  .card-price {
+    font-size: 1.25rem;
+  }
+  .btn-outline-primary {
+    transition: all 0.3s ease-in-out;
+  }
+  .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+ 
+</style>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 g-4">
+    <!-- Card 1 -->
+    <% for( let index=0; index < products.length; index++ ) { %>
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="<%= products[index].picture%>" class="card-img-top" alt="Product 1">
+        <div class="card-body text-center">
+          <h5 class="card-title"><%= products[index].title %></h5>
+          <p class="card-text text-muted"><%= products[index].description %></p>
+          <p class="card-price text-success fw-bold"><%= products[index].price %></p>
+          <form action="/cart/add/<%= products[index].id %>" method="POST" style="display: inline;">
+            <button type="submit" class="btn btn-outline-primary">Add to Cart</button>
+        </form>
+        </div>
+      </div>
+    </div>
+    <% } %>
+</div>
+
+   
