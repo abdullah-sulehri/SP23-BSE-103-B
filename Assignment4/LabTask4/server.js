@@ -55,9 +55,12 @@ mongoose
 // Basic Routes
 server.get("/", (req, res) => {
     let isAdmin = req.session.isAdmin || false;
+    let isLoggedIn = req.session.user || false;
+    if (isAdmin) return res.redirect("/admin");  
   res.render("index", {
     showNavbar: false,
     isAdmin,
+    isLoggedIn,
   });
 });
 
@@ -76,6 +79,31 @@ server.get("/cards", async (req, res) => {
     showNavbar: true
   });
 });
+server.get("/cart", (req, res) => {
+    // Check if user is logged in
+    if (!req.session.user) {
+      return res.redirect("/login"); // Redirect to login page if not logged in
+    }
+  
+    // Retrieve the cart from cookies or initialize it as an empty array
+    let cart = req.cookies.cart || [];
+  
+    // You can also retrieve product details from your database if necessary
+    // For example, you could fetch product details based on the cart items
+    Product.find({ id: { $in: cart } })
+      .then((products) => {
+        // Render the cart page with the productss
+        res.render("cart", {
+          showNavbar: true,
+          products: products, // Products in the cart
+          cart: cart, // Product IDs in the cart
+        });
+      })
+      .catch((err) => {
+        console.error("Error fetching products:", err);
+        res.status(500).send("Something went wrong");
+      });
+  });
 
 // Middleware for setting showNavbar globally (optional)
 server.use((req, res, next) => {

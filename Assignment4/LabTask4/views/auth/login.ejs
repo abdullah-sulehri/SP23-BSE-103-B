@@ -1,12 +1,113 @@
+<style>
+    body {
+      background: linear-gradient(135deg, #70e1f5, #ffd194); /* Gradient background */
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .login-container {
+      max-width: 400px;
+      margin: 100px auto;
+      background-color: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .login-container:hover {
+      transform: translateY(-10px); /* Subtle hover effect */
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .login-header h2 {
+      font-size: 30px;
+      color: #333;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .login-header p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .form-label {
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .form-control {
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+      padding: 12px;
+      margin-bottom: 20px; /* Adjust margin to add space between input fields */
+    }
+
+    .form-control:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+    }
+
+    .btn-info {
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      font-weight: 600;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-info:hover {
+      background-color: #0056b3;
+    }
+
+    .text-center {
+      margin-top: 20px;
+    }
+
+    .text-center a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .text-center a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+  
 <form action="" method="post">
     
-    <div class="form-group">
-        <label for="">Email</label>
-        <input type="text" class="form-control" name="email" value="abdullah.sulehri.11@gmail.com"/>
-    </div>
-    <div class="form-group">
-        <label for="">Password</label>
-        <input type="password" class="form-control" name="password" value="ab1234"/>
-    </div>
-    <button type="submit" class="btn btn-info">Login</button>
+    <div class="login-container">
+        <div class="login-header">
+          <h2>Login</h2>
+          <p>Please enter your credentials to access your account</p>
+        </div>
+    
+        <form action="" method="post">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email    </label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" value="abdullah.sulehri.11@gmail.com" required />
+          </div>
+    
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" value="ab1234" required />
+          </div>
+    
+          <div class="mb-3">
+            <button type="submit" class="btn btn-info">Login</button>
+          </div>
+    
+          <div class="text-center">
+            <p>Don't have an account? <a href="/register">Register here</a></p>
+          </div>
+        </form>
+      </div>
 </form>

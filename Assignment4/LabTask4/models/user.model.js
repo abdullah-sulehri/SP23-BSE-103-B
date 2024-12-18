@@ -4,6 +4,7 @@ let usersSchema = mongoose.Schema({
   email: String,
   password: String,
   role: [String],
+  default: ['user']
 });
 let UserModel = mongoose.model("user", usersSchema);
 

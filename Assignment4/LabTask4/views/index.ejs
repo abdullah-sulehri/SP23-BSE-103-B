@@ -193,13 +193,24 @@
                 
                 </div>
                 <div class="d-flex align-items-center">
-                    <a href="/auth/login" class="icon-link me-2">
+                    <% if (isLoggedIn) { %> 
+                      <!-- Show the Logout Button if the user is logged in -->
+                      <a href="/logout" class="icon-link me-2">
+                        <i class="bi bi-box-arrow-right"></i> <!-- Logout icon -->
+                        
+                      </a>
+                    <% } else { %> 
+                      <!-- Show the User Icon if the user is not logged in -->
+                      <a href="/auth/login" class="icon-link me-2">
                         <i class="bi bi-person"></i>
-                    </a>
+                      </a>
+                    <% } %>
+                  
+                    <!-- Shopping Cart Icon (Always visible) -->
                     <a href="#" class="icon-link">
-                        <i class="bi bi-cart3"></i>
+                      <i class="bi bi-cart3"></i>
                     </a>
-                </div>
+                  </div>
             </div>
         </div>
 </nav>

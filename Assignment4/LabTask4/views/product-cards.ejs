@@ -25,7 +25,9 @@
           <h5 class="card-title"><%= products[index].title %></h5>
           <p class="card-text text-muted"><%= products[index].description %></p>
           <p class="card-price text-success fw-bold"><%= products[index].price %></p>
-          <a href="#" class="btn btn-outline-primary">Add to Cart</a>
+          <form action="/cart/add/<%= products[index].id %>" method="POST" style="display: inline;">
+            <button type="submit" class="btn btn-outline-primary">Add to Cart</button>
+        </form>
         </div>
       </div>
     </div>

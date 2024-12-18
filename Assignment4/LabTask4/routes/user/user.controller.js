@@ -2,6 +2,7 @@ const express = require("express");
 let router = express.Router();
 let bcrypt = require("bcryptjs");  // Import bcrypt
 let User = require("../../models/user.model");
+const isAuthenticated = require("../../middlewares/auth-middleware");
 
 // Render Login Page
 router.get("/login", async (req, res) => {
@@ -63,5 +64,24 @@ router.get("/logout", async (req, res) => {
   req.session.isAdmin=null;  // Destroy session by clearing user data
   return res.redirect("/");  // Redirect to login page after logout
 });
+
+
+router.post("/cart/add/:id", (req, res) => {
+    const productId = req.params.id; // Get the product ID from the URL
+  
+    // Retrieve the cart from cookies, or initialize it as an empty array
+    let cart = req.cookies.cart || [];
+  
+    // Add the product ID to the cart if it's not already present
+    if (!cart.includes(productId)) {
+      cart.push(productId);
+    }
+  
+    // Set the updated cart back into cookies
+    res.cookie("cart", cart);
+    res.redirect("/cart"); 
+    console.log("Cart after adding product:", cart); // Debugging step
+     // Redirect to the cart page
+  });
 
 module.exports = router;
