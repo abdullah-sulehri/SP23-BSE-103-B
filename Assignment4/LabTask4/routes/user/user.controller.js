@@ -83,5 +83,13 @@ router.post("/cart/add/:id", (req, res) => {
     console.log("Cart after adding product:", cart); // Debugging step
      // Redirect to the cart page
   });
+  router.post("/cart/remove/:id", (req, res) => {
+    const productId = req.params.id;
+    let cart = req.cookies.cart || [];
+    cart = cart.filter(id => id !== productId);
+    res.cookie("cart", cart);
+    res.redirect("/cart");
+  });
+  
 
 module.exports = router;

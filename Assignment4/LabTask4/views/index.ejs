@@ -207,9 +207,16 @@
                     <% } %>
                   
                     <!-- Shopping Cart Icon (Always visible) -->
-                    <a href="#" class="icon-link">
-                      <i class="bi bi-cart3"></i>
-                    </a>
+                    <% if (isLoggedIn) { %> 
+                        <a href="/cart" class="icon-link">
+                            <i class="bi bi-cart3"></i>
+                        </a>
+                    <% } 
+                     else { %> 
+                        <a href="/auth/login" class="icon-link">
+                            <i class="bi bi-cart3"></i>
+                        </a>
+                        <% } %>
                   </div>
             </div>
         </div>
